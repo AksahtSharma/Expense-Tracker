@@ -1,5 +1,9 @@
-buildCommand: npm run build
-startCommand: npm run preview
-envVars:
-  - key: NODE_VERSION
-    value: 18.20.2
+services:
+  - type: static
+    name: expense-tracker
+    env: node
+    buildCommand: npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: NODE_VERSION
+        value: 18.20.2
